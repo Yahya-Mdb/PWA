@@ -1,12 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/output.css">
-    <title>Home Page PWA Project</title>
+    <title>Example web Home Page</title>
 </head>
+
 <body>
+    <!-- Overlay for mobile menu -->
+    <div id="overlay" class="hidden w-full h-full fixed top-0 left-0 bg-gray-900 opacity-50"></div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="px-4 w-3/4 h-full bg-white fixed hidden top-0 left-0 z-50 [&_h2]:text-sm">
+        <!-- Logo -->
+        <div class="flex justify-between items-center w-full mb-6 mt-4">
+            <!-- Logo -->
+            <h1 class="font-bold text-2xl">EXample</h1>
+            <!-- Close icon -->
+            <button class="" id="sidebar-close-icon">
+                <svg class="h-5 w-5 text-black" x-description="Heroicon name: outline/x"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Search box -->
+        <div
+            class="flex w-full focus-within:outline-2 focus-within:outline-blue-600 gap-2 focus-within:bg-white bg-gray-100 rounded-2xl py-2 px-4 mb-6">
+            <button tabindex="-1" class="cursor-pointer" type="submit">
+                <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor">
+
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                    <g id="SVGRepo_iconCarrier">
+                        <g id="Interface / Search_Magnifying_Glass">
+                            <path id="Vector"
+                                d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </g>
+
+                </svg>
+            </button>
+            <input id="search" type="search" placeholder="Search anything..."
+                class="caret-blue-500 w-full text-[12px] outline-none border-none [&::-webkit-search-cancel-button]:appearance-none">
+        </div>
+        <!-- Links -->
+        <div
+            class="w-full flex flex-col gap-1 [&_div]:flex [&_div]:w-full [&_div]:justify-start [&_div]:gap-4 [&_div]:items-center [&_div]:py-2.5 [&_div]:px-1.5 [&_div]:rounded-[10px] mb-20">
+            <!-- Home -->
+            <div class="bg-blue-50 text-blue-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <h2>Home</h2>
+            </div>
+            <!-- Events -->
+            <div class="hover:bg-gray-50 text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                </svg>
+                <h2>Events</h2>
+            </div>
+            <!-- About us -->
+            <div class="hover:bg-gray-50 text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                </svg>
+                <h2>About us</h2>
+            </div>
+        </div>
+        <!-- Dark mode -->
+        <div class="w-full flex justify-between items-center py-4 border-t-2 border-gray-200">
+            <div class="flex items-center gap-4 text-gray-800">
+                <button class="cursor-pointer">
+                    <svg class="text-gray-900 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </button>
+                <h2>Dark mode</h2>
+            </div>
+            <button>
+                <div class="w-10 h-5 bg-gray-200 rounded-full">
+                    <div class="w-1/2 rounded-full bg-white border-3 border-gray-400 h-full my-1"></div>
+                    <div class="hidden w-1/2"></div>
+                </div>
+            </button>
+        </div>
+        <!-- Profile -->
+        <div class="flex justify-between items-center pt-2.5 border-t-2 border-gray-100">
+            <div class="flex items-center gap-4 text-gray-800">
+                <img class="rounded-full cursor-pointer lg:w-10 w-8 lg:h-10 h-8 object-cover"
+                    src="statics/images/WIN_20261008_19_54_15_Pro (2).jpg" alt="Profile">
+                <h2>Profile</h2>
+            </div>
+            <div>
+                <button class="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4 text-gray-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Nav -->
+    <nav class="border-b border-gray-200">
+        <!-- Container -->
+        <div class="lg:mx-8 md:px-8 px-5">
+            <!-- Navbar -->
+            <div class="flex justify-between items-center md:py-4 py-2">
+                <!-- Logo -->
+                <div class="">
+                    <h1 class="w-fit cursor-pointer font-bold md:text-3xl text-2xl text-gray-900">EXample</h1>
+                </div>
+                <!-- Search box -->
+                <div
+                    class="w-2/6 md:flex hidden focus-within:outline-2 focus-within:outline-black gap-4 bg-gray-200 rounded-2xl py-2 px-4">
+                    <button tabindex="-1" class="cursor-pointer" type="submit">
+                        <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor">
+
+                            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                            <g id="SVGRepo_iconCarrier">
+                                <g id="Interface / Search_Magnifying_Glass">
+                                    <path id="Vector"
+                                        d="M15 15L21 21M10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </g>
+
+                        </svg>
+                    </button>
+                    <input id="search" type="search" placeholder="Search anything..."
+                        class="caret-gray-500 w-full outline-none border-none [&::-webkit-search-cancel-button]:appearance-none">
+                </div>
+                <!-- Links -->
+                <div class="flex items-center md:gap-6 gap-3 justify-end [&_div]:text-gray-500 [&_div]:font-medium">
+                    <!-- Dark Mode Toggle -->
+                    <div class="md:flex items-end hidden">
+                        <button class="cursor-pointer">
+                            <svg class="text-gray-500 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Links -->
+                    <div class="md:block hidden">
+                        <a class="text-blue-700" href="#">Home</a>
+                    </div>
+                    <div class="md:block hidden">
+                        <a class="hover:text-gray-700 hover:text-shadow-sm hover:text-shadow-gray-200 duration-150"
+                            href="#">Events</a>
+                    </div>
+                    <div class="md:block hidden">
+                        <a class="hover:text-gray-700 hover:text-shadow-sm hover:text-shadow-gray-200 duration-150 whitespace-nowrap"
+                            href="#">About us</a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <div id="sidebar-open-icon" class="flex items-center md:hidden">
+                        <button class="hover:scale-110 cursor-pointer">
+                            <svg class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- Profile Image -->
+                    <div>
+                        <a href="#">
+                            <img class="rounded-[100%] cursor-pointer lg:w-10 w-8 lg:h-10 h-8 object-cover"
+                                src="statics/images/WIN_20261008_19_54_15_Pro (2).jpg" alt="Profile">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Script -->
+    <script>
+        // Sidebar toggle
+        const sidebar = document.getElementById('sidebar'),
+            sidebarCloseIcon = document.getElementById('sidebar-close-icon'),
+            sidebarOpenIcon = document.getElementById('sidebar-open-icon'),
+            overlay = document.getElementById('overlay');
+
+        function openSidebar() {
+            sidebar.classList.add('absolute', 'flex', 'z-50', 'flex-col');
+            sidebar.classList.remove('hidden');
+
+            sidebarCloseIcon.classList.remove('hidden');;
+            sidebarCloseIcon.classList.add('flex');
+
+            document.body.classList.add('overflow-hidden');
+
+            overlay.classList.remove('hidden');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('absolute', 'flex', 'z-50', 'flex-col');
+            sidebar.classList.add('hidden');
+
+            sidebarCloseIcon.classList.add('hidden');
+            sidebarCloseIcon.classList.remove('flex');
+
+            document.body.classList.remove('overflow-hidden');
+
+            overlay.classList.add('hidden');
+        }
+
+        sidebarOpenIcon.addEventListener('click', () => openSidebar());
+        sidebarCloseIcon.addEventListener('click', () => closeSidebar());
+        overlay.addEventListener('click', () => closeSidebar());
+        window.addEventListener('resize', () => closeSidebar());
+    </script>
 
 </body>
+
 </html>

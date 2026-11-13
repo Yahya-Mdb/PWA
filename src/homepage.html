@@ -8,20 +8,20 @@
     <title>Example web Home Page</title>
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-950">
     <!-- Overlay for mobile menu -->
     <div id="overlay" class="hidden w-full h-full fixed top-0 left-0 bg-gray-900 opacity-50"></div>
 
 
     <!-- Sidebar -->
-    <div id="sidebar" class="px-4 w-3/4 h-full bg-white fixed hidden top-0 left-0 z-50 [&_h2]:text-sm">
+    <div id="sidebar" class="px-4 w-3/4 h-full bg-white dark:bg-gray-950 fixed hidden top-0 left-0 z-50 [&_h2]:text-sm">
         <!-- Logo -->
         <div class="flex justify-between items-center w-full mb-6 mt-4">
             <!-- Logo -->
-            <h1 class="font-bold text-2xl">EXample</h1>
+            <h1 class="text-black dark:text-white font-bold text-2xl">EXample</h1>
             <!-- Close icon -->
             <button class="" id="sidebar-close-icon">
-                <svg class="h-5 w-5 text-black" x-description="Heroicon name: outline/x"
+                <svg class="h-5 w-5 text-black dark:text-white" x-description="Heroicon name: outline/x"
                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                     aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
@@ -31,10 +31,10 @@
         </div>
         <!-- Search box -->
         <div
-            class="flex w-full focus-within:outline-2 focus-within:outline-blue-600 gap-2 focus-within:bg-white bg-gray-100 rounded-2xl py-2 px-4 mb-6">
+            class="flex w-full focus-within:outline-2 focus-within:outline-blue-700 dark:focus-within:outline-blue-400 gap-2 focus-within:bg-white dark:focus-within:bg-gray-950 bg-gray-100 dark:bg-gray-900 rounded-2xl py-2 px-4 mb-6">
             <button tabindex="-1" class="cursor-pointer" type="submit">
-                <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor">
+                <svg class="w-5 h-5 text-gray-600 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor">
 
                     <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
@@ -51,13 +51,13 @@
                 </svg>
             </button>
             <input id="search" type="search" placeholder="Search anything..."
-                class="caret-blue-500 w-full text-[12px] outline-none border-none [&::-webkit-search-cancel-button]:appearance-none">
+                class="caret-blue-700 dark:caret-blue-400 placeholder:text-gray-600 dark:placeholder:text-gray-400 text-black dark:text-white w-full text-[12px] outline-none border-none [&::-webkit-search-cancel-button]:appearance-none">
         </div>
         <!-- Links -->
         <div
             class="w-full flex flex-col gap-1 [&_div]:flex [&_div]:w-full [&_div]:justify-start [&_div]:gap-4 [&_div]:items-center [&_div]:py-2.5 [&_div]:px-1.5 [&_div]:rounded-[10px] mb-20">
             <!-- Home -->
-            <div class="bg-blue-50 text-blue-700">
+            <div class="bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -66,7 +66,7 @@
                 <h2>Home</h2>
             </div>
             <!-- Events -->
-            <div class="hover:bg-gray-50 text-gray-800">
+            <div class="hover:bg-gray-50 dark:hover:bg-gray-950 text-gray-800 dark:text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -75,7 +75,7 @@
                 <h2>Events</h2>
             </div>
             <!-- About us -->
-            <div class="hover:bg-gray-50 text-gray-800">
+            <div class="hover:bg-gray-50 dark:hover:bg-gray-950 text-gray-800 dark:text-gray-400">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -85,10 +85,10 @@
             </div>
         </div>
         <!-- Dark mode -->
-        <div class="w-full flex justify-between items-center py-4 border-t-2 border-gray-200">
-            <div class="flex items-center gap-4 text-gray-800">
+        <div class="w-full flex justify-between items-center py-4 border-t-2 border-gray-200 dark:border-t-gray-800">
+            <div class="flex items-center gap-4 text-gray-800 dark:text-gray-400">
                 <button class="cursor-pointer">
-                    <svg class="text-gray-900 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    <svg class="text-gray-900 dark:text-gray-400 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
@@ -96,16 +96,21 @@
                 </button>
                 <h2>Dark mode</h2>
             </div>
-            <button>
-                <div class="w-10 h-5 bg-gray-200 rounded-full">
-                    <div class="w-1/2 rounded-full bg-white border-3 border-gray-400 h-full my-1"></div>
-                    <div class="hidden w-1/2"></div>
+            <!-- Dark mode toggle -->
+            <div>
+                <div class="flex justify-start dark:justify-end w-10 h-5 bg-gray-200 dark:bg-gray-800 rounded-full">
+                    <button id="go-to-d-mode"
+                        class="dark:hidden block w-1/2 rounded-full bg-white border-3 border-gray-400 h-full duration-200">
+                    </button>
+                    <button id="go-to-l-mode"
+                        class="hidden dark:block w-1/2 rounded-full bg-black border-3 border-gray-900 h-full duration-200">
+                    </button>
                 </div>
-            </button>
+            </div>
         </div>
         <!-- Profile -->
-        <div class="flex justify-between items-center pt-2.5 border-t-2 border-gray-100">
-            <div class="flex items-center gap-4 text-gray-800">
+        <div class="flex justify-between items-center pt-2.5 border-t-2 border-gray-100 dark:border-t-gray-800">
+            <div class="flex items-center gap-4 text-gray-800 dark:text-gray-400">
                 <img class="rounded-full cursor-pointer lg:w-10 w-8 lg:h-10 h-8 object-cover"
                     src="statics/images/WIN_20261008_19_54_15_Pro (2).jpg" alt="Profile">
                 <h2>Profile</h2>
@@ -121,21 +126,23 @@
         </div>
     </div>
     <!-- Nav -->
-    <nav class="border-b border-gray-200">
+    <nav class="border-b border-gray-200 dark:border-none bg-white dark:bg-transparent mt-2">
         <!-- Container -->
-        <div class="lg:mx-8 md:px-8 px-5">
+        <div class="md:mx-4 lg:mx-8 dark:md:px-0 md:px-8 px-5">
             <!-- Navbar -->
-            <div class="flex justify-between items-center md:py-4 py-2">
+            <div
+                class="flex justify-between items-center md:py-4 px-0 dark:px-8 py-2 bg-white dark:bg-gray-900 rounded-none dark:rounded-2xl dark:border dark:border-gray-800">
                 <!-- Logo -->
                 <div class="">
-                    <h1 class="w-fit cursor-pointer font-bold md:text-3xl text-2xl text-gray-900">EXample</h1>
+                    <h1 class="w-fit cursor-pointer font-bold md:text-3xl text-2xl text-gray-900 dark:text-white">
+                        EXample</h1>
                 </div>
                 <!-- Search box -->
                 <div
-                    class="w-2/6 md:flex hidden focus-within:outline-2 focus-within:outline-black gap-4 bg-gray-200 rounded-2xl py-2 px-4">
+                    class="w-2/6 md:flex hidden focus-within:outline-2 focus-within:outline-black dark:focus-within:outline-gray-400 gap-4 bg-gray-200 dark:bg-gray-800 rounded-2xl py-2 px-4">
                     <button tabindex="-1" class="cursor-pointer" type="submit">
-                        <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor">
+                        <svg class="w-5 h-5 text-gray-600 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor">
 
                             <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
@@ -152,36 +159,48 @@
                         </svg>
                     </button>
                     <input id="search" type="search" placeholder="Search anything..."
-                        class="caret-gray-500 w-full outline-none border-none [&::-webkit-search-cancel-button]:appearance-none">
+                        class="caret-gray-600 dark:caret-gray-400 placeholder:text-gray-400 text-black dark:text-white w-full outline-none border-none [&::-webkit-search-cancel-button]:appearance-none">
                 </div>
                 <!-- Links -->
-                <div class="flex items-center md:gap-6 gap-3 justify-end [&_div]:text-gray-500 [&_div]:font-medium">
+                <div
+                    class="flex items-center md:gap-6 gap-3 justify-end [&_div]:text-gray-600 dark:[&_div]:text-gray-400 [&_div]:font-medium">
                     <!-- Dark Mode Toggle -->
-                    <div class="md:flex items-end hidden">
-                        <button class="cursor-pointer">
-                            <svg class="text-gray-500 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <div class="md:flex dark:md:hidden items-end hidden">
+                        <button id="dark-mode" class="cursor-pointer hover:scale-110 duration-150">
+                            <svg class="text-gray-600 dark:text-gray-300 h-5 w-5" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                             </svg>
                         </button>
                     </div>
+                    <!-- Light Mode Toggle -->
+                    <div class="md:hidden dark:md:flex items-end hidden">
+                        <button id="light-mode" class="cursor-pointer hover:scale-110 duration-150">
+                            <svg class="text-gray-600 dark:text-gray-300 h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                            </svg>
+                        </button>
+                    </div>
                     <!-- Links -->
                     <div class="md:block hidden">
-                        <a class="text-blue-700" href="#">Home</a>
+                        <a class="text-blue-700 dark:text-blue-400 hover:text-shadow-sm hover:text-shadow-blue-400/20 duration-150"
+                            href="#">Home</a>
                     </div>
                     <div class="md:block hidden">
-                        <a class="hover:text-gray-700 hover:text-shadow-sm hover:text-shadow-gray-200 duration-150"
+                        <a class="hover:text-gray-700 dark:hover:text-gray-400 hover:text-shadow-sm hover:text-shadow-gray-200 hover:dark:text-shadow-gray-700/60 duration-150"
                             href="#">Events</a>
                     </div>
                     <div class="md:block hidden">
-                        <a class="hover:text-gray-700 hover:text-shadow-sm hover:text-shadow-gray-200 duration-150 whitespace-nowrap"
+                        <a class="hover:text-gray-700 dark:hover:text-gray-400 hover:text-shadow-sm hover:text-shadow-gray-200 hover:dark:text-shadow-gray-700/60 duration-150"
                             href="#">About us</a>
                     </div>
                     <!-- Mobile Menu Button -->
                     <div id="sidebar-open-icon" class="flex items-center md:hidden">
                         <button class="hover:scale-110 cursor-pointer">
-                            <svg class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            <svg class="h-5 w-5 text-gray-600 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                 stroke-width="2">
                                 <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
                             </svg>
@@ -189,8 +208,8 @@
                     </div>
                     <!-- Profile Image -->
                     <div>
-                        <a href="#">
-                            <img class="rounded-[100%] cursor-pointer lg:w-10 w-8 lg:h-10 h-8 object-cover"
+                        <a class="hover:scale-110 duration-150" href="#">
+                            <img class="rounded-[100%] cursor-pointer lg:w-10 w-8 lg:h-10 h-8 object-cover hover:scale-105 duration-75 hover:shadow-2xl hover:shadow-gray-500/20"
                                 src="statics/images/WIN_20261008_19_54_15_Pro (2).jpg" alt="Profile">
                         </a>
                     </div>
@@ -205,11 +224,15 @@
         <!-- Container -->
         <div class="lg:mx-8 md:px-8 px-5">
             <!-- Main div -->
-            <div class="h-96 md:h-auto flex flex-col lg:flex-row md:gap-y-4 lg:gap-y-0 lg:items-center justify-center pb-4 md:py-14">
+            <div
+                class="h-96 md:h-auto flex flex-col lg:flex-row md:gap-y-4 lg:gap-y-0 lg:items-center justify-center pb-4 md:py-14">
                 <!-- Text -->
                 <div class="lg:w-1/2 flex-1 lg:gap-y-6 flex flex-col justify-center">
-                    <h2 class="font-bold text-3xl md:text-6xl leading-tight lg:pr-4">Better Experience Start Here</h2>
-                    <p class="text-gray-500 text-sm md:text-[23px] lg:pr-36">Discover amazing events, connect with people, and be part of something bigger.</p>
+                    <h2 class="text-black dark:text-white font-bold text-3xl md:text-6xl leading-tight lg:pr-4">Better
+                        Experience Start Here</h2>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm md:text-[23px] lg:pr-36">Discover amazing events,
+                        connect with
+                        people, and be part of something bigger.</p>
                 </div>
                 <!-- Picture -->
                 <div class="lg:w-1/2 flex-1 overflow-hidden rounded-2xl">
@@ -221,90 +244,129 @@
 
 
     <!-- Main content -->
-     <div class="mb-20">
+    <div class="mb-20">
         <!-- Container -->
         <div class="lg:mx-8 md:px-8 px-5">
             <!-- Content -->
             <div class="flex flex-col lg:flex-row gap-8 h-96">
                 <!-- Productivity -->
-                <div class="flex flex-col shadow-2xl shadow-gray-300 rounded-2xl flex-1 h-full cursor-pointer hover:scale-102 duration-175">
+                <div
+                    class="flex flex-col shadow-2xl shadow-gray-300 dark:shadow-none dark:border dark:border-gray-700 rounded-2xl flex-1 h-full cursor-pointer hover:scale-102 duration-175">
                     <!-- Top -->
                     <div class="relative h-4/6">
-                        <span class="rounded-2xl text-[12px] py-1 px-3 m-4 bg-blue-100 border border-blue-800 text-blue-800 shadow-lg shadow-blue-800/13 absolute top-0 left-0">Productivity</span>
-                        <img class="h-58 object-cover w-full rounded-t-2xl" src="statics/images/produc-pic.jpg" alt="Picture">
+                        <span
+                            class="rounded-2xl text-[12px] py-1 px-3 m-4 bg-blue-100 border border-blue-800 text-blue-800 shadow-lg shadow-blue-800/13 absolute top-0 left-0">Productivity</span>
+                        <img class="h-58 object-cover w-full rounded-t-2xl" src="statics/images/produc-pic.jpg"
+                            alt="Picture">
                     </div>
                     <!-- Bottom -->
-                    <div class="h-3/6 p-4 gap-y-2 flex flex-col z-10 -mt-4 bg-white rounded-b-2xl rounded-tl shadow-lg shadow-gray-300/40">
-                        <h3 class="font-bold text-2xl">Build Better Habits</h3>
-                        <p class="text-gray-500 text-sm pr-4 lg:pr-20">Small, consistent steps can lead to big changes, Learn how to create better habits, stay focused, and make progress in your daily life.</p>
+                    <div
+                        class="h-3/6 p-4 gap-y-2 flex flex-col z-10 -mt-4 bg-white dark:bg-gray-900 rounded-b-2xl rounded-tl shadow-lg shadow-gray-300/40 dark:shadow-none">
+                        <h3 class="font-bold text-2xl text-black dark:text-white">Build Better Habits</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm pr-4 lg:pr-20">Small, consistent steps can
+                            lead to big changes,
+                            Learn how to create better habits, stay focused, and make progress in your daily life.</p>
                     </div>
                 </div>
                 <!-- Adventure -->
-                <div class="flex flex-col shadow-2xl shadow-gray-300 rounded-2xl flex-1 h-full cursor-pointer hover:scale-102 duration-175">
+                <div
+                    class="flex flex-col shadow-2xl shadow-gray-300 dark:shadow-none dark:border dark:border-gray-700 rounded-2xl flex-1 h-full cursor-pointer hover:scale-102 duration-175">
                     <!-- Top -->
                     <div class="relative h-4/6 ">
-                        <span class="rounded-2xl text-[12px] py-1 px-3 m-4 bg-green-100 border border-green-800 text-green-800 shadow-lg shadow-green-800/13 absolute top-0 left-0">Adventure</span>
-                        <img class="h-58 object-cover w-full rounded-t-2xl" src="statics/images/adventure-pic.jpg" alt="Picture">
+                        <span
+                            class="rounded-2xl text-[12px] py-1 px-3 m-4 bg-green-100 border border-green-800 text-green-800 shadow-lg shadow-green-800/13 absolute top-0 left-0">Adventure</span>
+                        <img class="h-58 object-cover w-full rounded-t-2xl" src="statics/images/adventure-pic.jpg"
+                            alt="Picture">
                     </div>
                     <!-- Bottom -->
-                    <div class="h-3/6 z-10 p-4 gap-y-2 flex flex-col -mt-4 bg-white rounded-b-2xl rounded-tl shadow-lg shadow-gray-300/40">
-                        <h3 class="font-bold text-2xl">Explore New Places</h3>
-                        <p class="text-gray-500 text-sm pr-4 lg:pr-20">From hidden gems to popular destinations, find the best to visit, experience new cultures, and make unforgettable memories.</p>
+                    <div
+                        class="h-3/6 z-10 p-4 gap-y-2 flex flex-col -mt-4 bg-white dark:bg-gray-900 rounded-b-2xl rounded-tl shadow-lg shadow-gray-300/40 dark:shadow-none">
+                        <h3 class="font-bold text-2xl text-black dark:text-white">Explore New Places</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm pr-4 lg:pr-20">From hidden gems to popular
+                            destinations, find
+                            the best to visit, experience new cultures, and make unforgettable memories.</p>
                     </div>
                 </div>
                 <!-- Creativity -->
-                <div class="flex flex-col shadow-2xl shadow-gray-300 rounded-2xl flex-1 h-full cursor-pointer hover:scale-102 duration-175">
+                <div
+                    class="flex flex-col shadow-2xl shadow-gray-300 dark:shadow-none dark:border dark:border-gray-700 rounded-2xl flex-1 h-full cursor-pointer hover:scale-102 duration-175">
                     <!-- Top -->
                     <div class="relative h-4/6">
-                        <span class="inline-block rounded-2xl text-[12px] py-1 px-3 m-4 bg-purple-100 border border-purple-800 text-purple-800 shadow-lg shadow-purple-800/13 absolute top-0 left-0">Creativity</span>
-                        <img class="h-58 object-cover w-full rounded-t-2xl" src="statics/images/creativity-pic.jpg" alt="Picture">
+                        <span
+                            class="inline-block rounded-2xl text-[12px] py-1 px-3 m-4 bg-purple-100 border border-purple-800 text-purple-800 shadow-lg shadow-purple-800/13 absolute top-0 left-0">Creativity</span>
+                        <img class="h-58 object-cover w-full rounded-t-2xl" src="statics/images/creativity-pic.jpg"
+                            alt="Picture">
                     </div>
                     <!-- Bottom -->
-                    <div class="h-3/6 z-10 p-4 gap-y-2 flex flex-col -mt-4 bg-white rounded-b-2xl rounded-tl shadow-lg shadow-gray-300/40">
-                        <h3 class="font-bold text-2xl">Capture Your Story</h3>
-                        <p class="text-gray-500 text-sm pr-4 lg:pr-20">Photography isn't just about picturs - it's about perspective, Learn tips, tricks, and techniques to turn everyday moments into something special.</p>
+                    <div
+                        class="h-3/6 z-10 p-4 gap-y-2 flex flex-col -mt-4 bg-white dark:bg-gray-900 rounded-b-2xl rounded-tl shadow-lg shadow-gray-300/40 dark:shadow-none">
+                        <h3 class="font-bold text-2xl text-black dark:text-white">Capture Your Story</h3>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm pr-4 lg:pr-20">Photography isn't just about
+                            picturs - it's about
+                            perspective, Learn tips, tricks, and techniques to turn everyday moments into something
+                            special.</p>
                     </div>
                 </div>
             </div>
-     </div>
+        </div>
 
-    <!-- Script -->
-    <script>
-        // Sidebar toggle
-        const sidebar = document.getElementById('sidebar'),
-            sidebarCloseIcon = document.getElementById('sidebar-close-icon'),
-            sidebarOpenIcon = document.getElementById('sidebar-open-icon'),
-            overlay = document.getElementById('overlay');
+        <!-- Script -->
+        <script>
+            // Sidebar toggle
+            const sidebar = document.getElementById('sidebar'),
+                sidebarCloseIcon = document.getElementById('sidebar-close-icon'),
+                sidebarOpenIcon = document.getElementById('sidebar-open-icon'),
+                overlay = document.getElementById('overlay');
 
-        function openSidebar() {
-            sidebar.classList.add('absolute', 'flex', 'z-50', 'flex-col');
-            sidebar.classList.remove('hidden');
+            function openSidebar() {
+                sidebar.classList.add('absolute', 'flex', 'z-50', 'flex-col');
+                sidebar.classList.remove('hidden');
 
-            sidebarCloseIcon.classList.remove('hidden');;
-            sidebarCloseIcon.classList.add('flex');
+                sidebarCloseIcon.classList.remove('hidden');;
+                sidebarCloseIcon.classList.add('flex');
 
-            document.body.classList.add('overflow-hidden');
+                document.body.classList.add('overflow-hidden');
 
-            overlay.classList.remove('hidden');
-        }
+                overlay.classList.remove('hidden');
+            }
 
-        function closeSidebar() {
-            sidebar.classList.remove('absolute', 'flex', 'z-50', 'flex-col');
-            sidebar.classList.add('hidden');
+            function closeSidebar() {
+                sidebar.classList.remove('absolute', 'flex', 'z-50', 'flex-col');
+                sidebar.classList.add('hidden');
 
-            sidebarCloseIcon.classList.add('hidden');
-            sidebarCloseIcon.classList.remove('flex');
+                sidebarCloseIcon.classList.add('hidden');
+                sidebarCloseIcon.classList.remove('flex');
 
-            document.body.classList.remove('overflow-hidden');
+                document.body.classList.remove('overflow-hidden');
 
-            overlay.classList.add('hidden');
-        }
+                overlay.classList.add('hidden');
+            }
 
-        sidebarOpenIcon.addEventListener('click', () => openSidebar());
-        sidebarCloseIcon.addEventListener('click', () => closeSidebar());
-        overlay.addEventListener('click', () => closeSidebar());
-        window.addEventListener('resize', () => closeSidebar());
-    </script>
+            sidebarOpenIcon.addEventListener('click', () => openSidebar());
+            sidebarCloseIcon.addEventListener('click', () => closeSidebar());
+            overlay.addEventListener('click', () => closeSidebar());
+            window.addEventListener('resize', () => closeSidebar());
+
+            // Dark mode
+
+            const darkmode = document.getElementById('dark-mode'),
+                lightmode = document.getElementById('light-mode'),
+                sidebar_darkmode = document.getElementById('go-to-d-mode'),
+                sidebar_lightmode = document.getElementById('go-to-l-mode');
+
+            function Dmode() {
+                document.body.classList.add('dark');
+            }
+            function Lmode() {
+                document.body.classList.remove('dark');
+            }
+
+
+            darkmode.addEventListener('click', () => Dmode());
+            sidebar_darkmode.addEventListener('click', () => Dmode());
+            lightmode.addEventListener('click', () => Lmode());
+            sidebar_lightmode.addEventListener('click', () => Lmode());
+        </script>
 
 </body>
 
